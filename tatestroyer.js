@@ -11,10 +11,12 @@ function buttonfinder(regexp){
     return buttons[found]
 }
 async function loop() {
-    if(document.body.innerHTML.match("#andrew|#tate")!=undefined){
-        buttonfinder("arrow-right").click()
-        await sleep(1000)
+    while(true){
+        if(document.body.innerHTML.match("#andrew|#tate").length>0){
+            buttonfinder("arrow-right").click()
+            await sleep(1000)
+        }
+        await sleep(10)
     }
-    requestAnimationFrame(loop())
 }
 loop()
