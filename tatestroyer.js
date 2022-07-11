@@ -1,5 +1,5 @@
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-function regexsearch(regexp){
+function buttonfinder(regexp){
     let buttons=document.querySelectorAll("button")
     let found;
     for (let i = 0; i < buttons.length; i++) {
@@ -12,7 +12,7 @@ function regexsearch(regexp){
 }
 async function loop() {
     if(document.body.innerHTML.match("#andrew|#tate").length>0){
-        regexsearch("arrow-right").click()
+        buttonfinder("arrow-right").click()
         await sleep(1000)
     }
     requestAnimationFrame(loop())
