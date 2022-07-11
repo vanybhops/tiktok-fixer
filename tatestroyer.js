@@ -13,7 +13,7 @@ function buttonfinder(regexp){
 async function loop() {
     while(true){
         if(document.body.innerHTML.match("#andrew|#tate")!=undefined){
-            buttonfinder("arrow-right").click()
+            try{buttonfinder("arrow-right").click()}catch{}
             await sleep(1000)
         }
         await sleep(10)
