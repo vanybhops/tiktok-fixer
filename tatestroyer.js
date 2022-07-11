@@ -11,7 +11,7 @@ function buttonfinder(regexp){
     return buttons[found]
 }
 async function loop() {
-    if(document.body.innerHTML.match("#andrew|#tate").length>0){
+    if(document.body.innerHTML.match("#andrew|#tate")!=undefined){
         buttonfinder("arrow-right").click()
         await sleep(1000)
     }
